@@ -1,9 +1,9 @@
-(function () {
-  var users = ["Tyler", "Sarah", "Dan"]
+var users = ["Tyler", "Sarah", "Dan"]
 
-  function getUsers() {
-    return users
-  }
+function getUsers() {
+  return users
+}
 
-  APP.getUsers = getUsers
-})()
+module.exports = {
+  getUsers: getUsers
+}

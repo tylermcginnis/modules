@@ -1,23 +1,23 @@
-(function () {
-  function addUserToDOM(name) {
-    const node = document.createElement("li")
-    const text = document.createTextNode(name)
-    node.appendChild(text)
+var getUsers = require('./users').getUsers
 
-    document.getElementById("users")
-      .appendChild(node)
-  }
+function addUserToDOM(name) {
+  const node = document.createElement("li")
+  const text = document.createTextNode(name)
+  node.appendChild(text)
 
-  document.getElementById("submit")
-    .addEventListener("click", function() {
-      var input = document.getElementById("input")
-      addUserToDOM(input.value)
+  document.getElementById("users")
+    .appendChild(node)
+}
 
-      input.value = ""
-  })
+document.getElementById("submit")
+  .addEventListener("click", function() {
+    var input = document.getElementById("input")
+    addUserToDOM(input.value)
 
-  var users = APP.getUsers()
-  for (var i = 0; i < users.length; i++) {
-    addUserToDOM(users[i])
-  }
-})()
+    input.value = ""
+})
+
+var users = getUsers()
+for (var i = 0; i < users.length; i++) {
+  addUserToDOM(users[i])
+}
