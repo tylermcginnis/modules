@@ -1,9 +1,5 @@
 var users = ["Tyler", "Sarah", "Dan"]
 
-function getUsers() {
+export default function getUsers() {
   return users
-}
-
-module.exports = {
-  getUsers: getUsers
 }

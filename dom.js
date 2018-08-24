@@ -1,4 +1,4 @@
-var getUsers = require('./users').getUsers
+import getUsers from './users.js'
 
 function addUserToDOM(name) {
   const node = document.createElement("li")
